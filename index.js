@@ -3,16 +3,16 @@ const fs = require('fs');
 
 http.createServer((req, res) => {
   const { url } = req;
-  filename = '/home/tomek/learn-backend/basic-site/404.html';
+  filename = '404.html';
   switch (url) {
     case '/':
-      filename = '/home/tomek/learn-backend/basic-site/index.html';
+      filename = 'index.html';
       break;
     case '/about':
-      filename = '/home/tomek/learn-backend/basic-site/about.html';
+      filename = 'about.html';
       break;
     case '/contact-me':
-      filename = '/home/tomek/learn-backend/basic-site/contact-me.html';
+      filename = 'contact-me.html';
       break;
   }
   fs.readFile(filename, (err, data) => {
